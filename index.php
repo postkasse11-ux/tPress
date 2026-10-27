@@ -1325,7 +1325,7 @@ hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
 <?php endif; ?>
 
 <footer style="margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.85rem">
-  <p><?= t('powered_by') ?></p>
+  <p><?= t('powered_by') ?> <a href="https://github.com/postkasse11-ux/tPress" target="_blank" rel="noopener">tPress</a></p>
 </footer>
 </body>
 </html>
