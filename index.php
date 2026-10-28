@@ -1098,7 +1098,19 @@ hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
     </div>
     <div id="previewContainer" class="body"></div>
 
-    <p class="hint"><?= t('markdown_hint') ?></p>
+        <p class="hint">
+      <strong>Formatér teksten med enkel Markdown:</strong><br>
+      • <code>**fet skrift**</code>, <code>*kursiv*</code>, <code>`inline kode`</code><br>
+      • Lenke: <code>[Tekst](https://eksempel.no)</code><br>
+      • Bilde (full bredde): <code>![Beskrivelse](uploads/filnavn.jpg)</code><br>
+      • Bilde (flyt høyre): <code>[img-right: uploads/filnavn.jpg]</code><br>
+      • Bilde (flyt venstre): <code>[img-left: uploads/filnavn.jpg]</code><br>
+      • Bilde (sentrert): <code>[img-center: uploads/filnavn.jpg]</code><br>
+      • Lyd: <code>[audio: uploads/fil.mp3]</code> · Video: <code>[video: uploads/fil.mp4]</code><br>
+      • Innbygging: <code>[embed: https://youtu.be/xxxxxxx]</code><br>
+      • Start en linje med <code># </code> for overskrift, <code>- </code> for liste, eller <code>&gt; </code> for sitat<br>
+      • Kodeblokk: pakk inn koden i tre backticks <code>```</code> over og under
+    </p>
 
     <div class="form-actions">
       <button type="submit" name="action" value="publish"><?= t('publish') ?></button>
