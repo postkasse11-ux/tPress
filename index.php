@@ -194,6 +194,7 @@ $translations = [
         'empty_preview' => 'Tomt.',
         'preview_error' => 'Feil under forhåndsvisning.',
         'markdown_hint' => 'Markdown: **fet**, *kursiv*, # Overskrift, - liste, > sitat, ![alt](uploads/bilde.jpg).',
+        'markdown_help' => '<strong>Formatér teksten med enkel Markdown:</strong><br>• <code>**fet skrift**</code>, <code>*kursiv*</code>, <code>`inline kode`</code><br>• Lenke: <code>[Tekst](https://eksempel.no)</code><br>• Bilde (full bredde): <code>![Beskrivelse](uploads/filnavn.jpg)</code><br>• Bilde (flyt høyre): <code>[img-right: uploads/filnavn.jpg]</code><br>• Bilde (flyt venstre): <code>[img-left: uploads/filnavn.jpg]</code><br>• Bilde (sentrert): <code>[img-center: uploads/filnavn.jpg]</code><br>• Lyd: <code>[audio: uploads/fil.mp3]</code> · Video: <code>[video: uploads/fil.mp4]</code><br>• Innbygging: <code>[embed: https://youtu.be/xxxxxxx]</code><br>• Start en linje med <code># </code> for overskrift, <code>- </code> for liste, eller <code>&gt; </code> for sitat<br>• Kodeblokk: pakk inn koden i tre backticks <code>```</code> over og under',
         'publish' => 'Publiser nå',
         'save_draft' => '💾 Lagre kladd',
         'cancel' => 'Avbryt',
@@ -219,7 +220,7 @@ $translations = [
         'login_button' => 'Logg inn',
         'not_found' => 'Fant ikke innlegget',
         'draft_badge' => 'Kladd',
-        'powered_by' => 'Powered by tPress',
+        'powered_by' => 'Drevet av',
     ],
     'en' => [
         'home' => 'Home',
@@ -262,6 +263,7 @@ $translations = [
         'empty_preview' => 'Empty.',
         'preview_error' => 'Preview error.',
         'markdown_hint' => 'Markdown: **bold**, *italic*, # Heading, - list, > quote, ![alt](uploads/image.jpg).',
+        'markdown_help' => '<strong>Format text with simple Markdown:</strong><br>• <code>**bold**</code>, <code>*italic*</code>, <code>`inline code`</code><br>• Link: <code>[Text](https://example.com)</code><br>• Image (full width): <code>![Alt text](uploads/image.jpg)</code><br>• Image (float right): <code>[img-right: uploads/image.jpg]</code><br>• Image (float left): <code>[img-left: uploads/image.jpg]</code><br>• Image (centered): <code>[img-center: uploads/image.jpg]</code><br>• Audio: <code>[audio: uploads/file.mp3]</code> · Video: <code>[video: uploads/file.mp4]</code><br>• Embed: <code>[embed: https://youtu.be/xxxxxxx]</code><br>• Start a line with <code># </code> for heading, <code>- </code> for list, or <code>&gt; </code> for quote<br>• Code block: wrap code in three backticks <code>```</code> above and below',
         'publish' => 'Publish now',
         'save_draft' => '💾 Save draft',
         'cancel' => 'Cancel',
@@ -287,7 +289,7 @@ $translations = [
         'login_button' => 'Log in',
         'not_found' => 'Post not found',
         'draft_badge' => 'Draft',
-        'powered_by' => 'Powered by tPress',
+        'powered_by' => 'Powered by',
     ]
 ];
 
@@ -1098,19 +1100,7 @@ hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
     </div>
     <div id="previewContainer" class="body"></div>
 
-        <p class="hint">
-      <strong>Formatér teksten med enkel Markdown:</strong><br>
-      • <code>**fet skrift**</code>, <code>*kursiv*</code>, <code>`inline kode`</code><br>
-      • Lenke: <code>[Tekst](https://eksempel.no)</code><br>
-      • Bilde (full bredde): <code>![Beskrivelse](uploads/filnavn.jpg)</code><br>
-      • Bilde (flyt høyre): <code>[img-right: uploads/filnavn.jpg]</code><br>
-      • Bilde (flyt venstre): <code>[img-left: uploads/filnavn.jpg]</code><br>
-      • Bilde (sentrert): <code>[img-center: uploads/filnavn.jpg]</code><br>
-      • Lyd: <code>[audio: uploads/fil.mp3]</code> · Video: <code>[video: uploads/fil.mp4]</code><br>
-      • Innbygging: <code>[embed: https://youtu.be/xxxxxxx]</code><br>
-      • Start en linje med <code># </code> for overskrift, <code>- </code> for liste, eller <code>&gt; </code> for sitat<br>
-      • Kodeblokk: pakk inn koden i tre backticks <code>```</code> over og under
-    </p>
+    <p class="hint"><?= t('markdown_help') ?></p>
 
     <div class="form-actions">
       <button type="submit" name="action" value="publish"><?= t('publish') ?></button>
@@ -1337,7 +1327,7 @@ hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
 <?php endif; ?>
 
 <footer style="margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.85rem">
-  <p><?= e(__('powered_by')) ?> <a href="https://github.com/postkasse11-ux/tPress" target="_blank" rel="noopener">tPress</a></p>
+  <p><?= e(t('powered_by')) ?> <a href="https://github.com/postkasse11-ux/tPress" target="_blank" rel="noopener">tPress</a></p>
 </footer>
 </body>
 </html>
